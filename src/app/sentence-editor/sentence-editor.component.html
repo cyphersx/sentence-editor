@@ -1,0 +1,17 @@
+<!-- Using a two column grid for stacking in smaller viwes. -->
+<div class="uk-grid-match uk-child-width-1-2@m" uk-grid>
+  <div>
+    <!-- <sentences-list (selected)="onVoted($event)"></sentences-list> -->
+    <h3>sentences overview</h3>
+    <ul class="uk-list">
+      <li *ngFor="let sentence of sentences"
+        [class.selected]="sentence == selected"
+        (click)="selectItem(sentence)">
+        <p>{{ sentence.getSentence() }}</p>
+      </li>
+    </ul>    
+  </div>
+  <div>
+    <sentence-edit [sentenceToEdit]="selected"></sentence-edit>
+  </div>
+</div>

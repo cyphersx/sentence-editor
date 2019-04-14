@@ -1,0 +1,30 @@
+$border-color: #E8E8E8;
+
+ul {
+  margin: 0;
+  padding: 0;
+  
+  li {
+    padding: 10px 0;
+    margin: 0 !important;
+    border-top: 1px solid $border-color;
+    cursor: pointer;
+
+    p {
+      margin-left: 15px;
+    }
+
+    &:hover {
+      background: rgb(244, 244, 244);
+    }
+
+    &.selected {
+      background: #A4B8CE;
+      color: white;
+    }
+  }
+}
+
+li:last-of-type {
+  border-bottom: 1px solid $border-color;
+}
