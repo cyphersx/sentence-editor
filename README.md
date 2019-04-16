@@ -1,6 +1,6 @@
 # SentenceEditor
 
-An editor to manage sentences and edit it's elements.
+An editor to manage sentences and edit particular elements.
 
 **Used Frameworks:**
 - UIkit (http://www.getuikit.com) for styling the ui.
