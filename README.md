@@ -1,5 +1,7 @@
 # SentenceEditor
 
+An editor to manage sentences and edit it's elements.
+
 **Used Frameworks:**
 - UIkit (http://www.getuikit.com) for styling the ui.
 - Angular (https://angular.io) for the data-driven part.
