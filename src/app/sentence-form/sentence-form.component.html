@@ -1,0 +1,43 @@
+<div>
+  <h3>edit elements</h3>
+
+  <!-- Field 'Subject' -->
+  <div class="frm-ctrl">
+    <label>
+      <p
+      [ngClass]="{
+        'invalid': this.invalid('subject'),
+        'valid': this.valid('subject'),
+        'complete': this.sentenceToEdit.complete
+      }">
+      Subject</p>
+      <input [(ngModel)]="sentenceToEdit.subject" #subject />
+    </label>
+  </div>
+
+  <!-- Field 'Verb' -->
+  <div class="frm-ctrl">
+    <label><p
+      [ngClass]="{
+        'invalid': this.invalid('verb'),
+        'valid': this.valid('verb'),
+        'complete': this.sentenceToEdit.complete
+      }">      
+      Verb</p>
+      <input [(ngModel)]="sentenceToEdit.verb" />
+    </label>
+  </div>
+
+  <!-- Field 'Object' -->
+  <div class="frm-ctrl">
+    <label><p
+      [ngClass]="{
+        'invalid': this.invalid('obj'),
+        'valid': this.valid('obj'),
+        'complete': this.sentenceToEdit.complete
+      }">            
+      Object</p>
+      <input [(ngModel)]="sentenceToEdit.obj" />
+    </label>
+  </div>
+</div>

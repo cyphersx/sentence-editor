@@ -1,7 +1,12 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SentencesService } from '../shared/sentences.service';
 import { Sentence } from '../shared/sentence';
+import { SentenceFormComponent } from '../sentence-form/sentence-form.component';
 
+/**
+ * Overview of the sentences with
+ * an opportunity for selecting an item to edit.
+ */
 @Component({
   selector: 'sentence-editor',
   templateUrl: './sentence-editor.component.html',
@@ -10,6 +15,10 @@ import { Sentence } from '../shared/sentence';
 export class SentenceEditorComponent implements OnInit {
   sentences: Array<Sentence>;
   selected: Sentence = null;
+
+  // Hold reference to formular to set focus, if
+  // a sentence is selected.
+  @ViewChild('editform') editform: SentenceFormComponent;
 
   constructor(private sentencesService: SentencesService) { }
 
@@ -25,5 +34,9 @@ export class SentenceEditorComponent implements OnInit {
   // -----------------------------------------   
   selectItem(item: Sentence) {
     this.selected = item;
+
+    // Catch initial null
+    if(this.editform)
+      this.editform.setFocus();
   }
 }

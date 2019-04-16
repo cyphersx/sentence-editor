@@ -3,7 +3,7 @@ $border-color: #E8E8E8;
 ul {
   margin: 0;
   padding: 0;
-  
+  width: 500px;
   li {
     padding: 10px 0;
     margin: 0 !important;
@@ -27,4 +27,12 @@ ul {
 
 li:last-of-type {
   border-bottom: 1px solid $border-color;
+}
+
+.ovw-header {
+  margin-bottom: 20px;
+}
+
+sentence-form {
+  margin-top: 30px;
 }

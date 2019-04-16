@@ -1,8 +1,10 @@
-<!-- Using a two column grid for stacking in smaller viwes. -->
-<div class="uk-grid-match uk-child-width-1-2@m" uk-grid>
+<!-- Using a two column grid for stacking in smaller views. -->
+<div class="uk-grid-large uk-child-width-1-2@m" uk-grid>
   <div>
-    <!-- <sentences-list (selected)="onVoted($event)"></sentences-list> -->
-    <h3>sentences overview</h3>
+    <div class="ovw-header uk-flex uk-flex-between uk-flex-middle">
+      <h3>sentences overview</h3>
+      <control-bar></control-bar>
+    </div>
     <ul class="uk-list">
       <li *ngFor="let sentence of sentences"
         [class.selected]="sentence == selected"
@@ -11,7 +13,9 @@
       </li>
     </ul>    
   </div>
-  <div>
-    <sentence-edit [sentenceToEdit]="selected"></sentence-edit>
-  </div>
+  <sentence-form
+    #editform
+    *ngIf="selected"
+    [sentenceToEdit]="selected">
+  </sentence-form>
 </div>

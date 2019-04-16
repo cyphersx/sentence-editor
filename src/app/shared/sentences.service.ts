@@ -1,4 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
+
 import { data } from './data';
 import { Sentence } from './sentence';
 
