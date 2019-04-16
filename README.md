@@ -1,4 +1,4 @@
-# SentenceEditor
+# CGM LAB Sentence Editor
 
 An editor to manage sentences and edit particular elements.
 
